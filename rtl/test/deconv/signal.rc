@@ -1,0 +1,98 @@
+Magic 271485
+Revision Verdi_V-2023.12-SP2
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 25 1920 904 252 63
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/dingsq/verilog/rtl/test/deconv/ut_deconv.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 102305546.102223 102462865.994620
+cursor 102375000.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 44
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "G1"
+activeDirFile "" "/home/dingsq/verilog/rtl/test/deconv/ut_deconv.fsdb"
+addSignal -h 15 /ut_deconv/dut/clk
+addSignal -h 15 -holdScope rst_n
+addSignal -h 15 -UNSIGNED -HEX -holdScope in_data[31:0]
+addSignal -h 15 -holdScope in_valid
+addSignal -h 15 -holdScope in_ready
+addSignal -h 15 -UNSIGNED -HEX -holdScope out_data[63:0]
+addSignal -h 15 -holdScope out_valid
+addSignal -h 15 -holdScope out_ready
+addGroup "G2"
+addSignal -h 15 -UNSIGNED -HEX /ut_deconv/dut/cntr_kh[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope cntr_kw[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope cntr_fi[1:0]
+addGroup "G3"
+addSignal -h 15 /ut_deconv/dut/acc[0:1]
+addGroup "G4"
+addSignal -h 15 -UNSIGNED -HEX /ut_deconv/dut/weight_addr[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope weight_data[63:0]
+addGroup "G5" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /ut_deconv/dut/weight_addr[5:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope weight_data[63:0]
+addSignal -h 15 -holdScope line_buffer_we
+addSignal -h 15 -UNSIGNED -HEX -holdScope line_buffer_waddr[4:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope line_buffer_wdata[31:0]
+addSignal -h 15 -holdScope line_buffer_re
+addSignal -h 15 -UNSIGNED -HEX -holdScope line_buffer_raddr[4:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope line_buffer_rdata[31:0]
+addGroup "G6"
+addSignal -h 15 /ut_deconv/dut/gen_mac_array[0]/u_mac_array/en
+addSignal -h 15 -holdScope dat_vld
+addSignal -h 15 -holdScope clr
+addSignal -h 15 -UNSIGNED -HEX -holdScope tail_acc_r[31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope mac_cascade[3][31:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope x_aligned[3][8:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope w_aligned[3][7:0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope valid_delay[3:0]
+addSignal -h 15 -holdScope valid_delay[3]
+addSignal -h 15 -holdScope valid_delay[2]
+addSignal -h 15 -holdScope valid_delay[1]
+addSignal -h 15 -holdScope valid_delay[0]
+addSignal -expanded -h 15 -UNSIGNED -HEX -holdScope clr_delay[3:0]
+addSignal -h 15 -holdScope clr_delay[3]
+addSignal -h 15 -holdScope clr_delay[2]
+addSignal -h 15 -holdScope clr_delay[1]
+addSignal -h 15 -holdScope clr_delay[0]
+addGroup "G7"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+
